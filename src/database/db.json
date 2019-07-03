@@ -58,15 +58,65 @@
       "price": "j",
       "src": "m",
       "id": 5
+    },
+    {
+      "nama": "TES",
+      "desc": "Barang Bagus",
+      "price": "23000",
+      "src": "no pict",
+      "id": 6
     }
   ],
   "cart": [
     {
+      "idUsername": 2,
+      "idBarang": 4,
+      "nama": "Bagus",
+      "jumlah": 2,
+      "price": "20000",
+      "picture": "s",
+      "deskripsi": "mantep",
+      "id": 1
+    },
+    {
+      "idUsername": 2,
+      "idBarang": 3,
       "nama": "Anjay",
-      "deksripsi": "Barang bagus",
-      "harga": "2000",
-      "gambar": "s",
+      "jumlah": 1,
+      "price": "2000",
+      "picture": "s",
+      "deskripsi": "Barang bagus",
+      "id": 2
+    },
+    {
+      "idUsername": 2,
+      "idBarang": 4,
+      "nama": "Bagus",
+      "jumlah": 2,
+      "price": "20000",
+      "picture": "s",
+      "deskripsi": "mantep",
       "id": 3
+    },
+    {
+      "idUsername": 2,
+      "idBarang": 4,
+      "nama": "Bagus",
+      "jumlah": 5,
+      "price": "20000",
+      "picture": "s",
+      "deskripsi": "mantep",
+      "id": 4
+    },
+    {
+      "idUsername": 2,
+      "idBarang": 4,
+      "nama": "Bagus",
+      "jumlah": 7,
+      "price": "20000",
+      "picture": "s",
+      "deskripsi": "mantep",
+      "id": 5
     }
   ]
 }

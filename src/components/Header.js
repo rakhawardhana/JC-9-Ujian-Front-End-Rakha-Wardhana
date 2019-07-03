@@ -1,79 +1,9 @@
-// import React, { Component } from 'react'
-// import {
-//     Collapse,
-//     Navbar,
-//     NavbarToggler,
-//     NavbarBrand,
-//     Nav,
-//     NavItem,
-//     NavLink,
-//     UncontrolledDropdown,
-//     DropdownToggle,
-//     DropdownMenu,
-//     DropdownItem } from 'reactstrap';
-
-// class Header extends Component {
-//     constructor(props) {
-//         super(props);
-    
-//         this.toggle = this.toggle.bind(this);
-//         this.state = {
-//           isOpen: false
-//         };
-//       }
-//       toggle() {
-//         this.setState({
-//           isOpen: !this.state.isOpen
-//         });
-//       }
-
-//     render () {
-//         return (
-//             <div>
-//                 <Navbar color="light" light expand="md">
-//                 <NavbarBrand href="/">reactstrap</NavbarBrand>
-//                 <NavbarToggler onClick={this.toggle} />
-//                 <Collapse isOpen={this.state.isOpen} navbar>
-//                     <Nav className="ml-auto" navbar>
-//                     <NavItem>
-//                         <NavLink href="/components/">Components</NavLink>
-//                     </NavItem>
-//                     <NavItem>
-//                         <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-//                     </NavItem>
-//                     <UncontrolledDropdown nav inNavbar>
-//                         <DropdownToggle nav caret>
-//                         Options
-//                         </DropdownToggle>
-//                         <DropdownMenu right>
-//                         <DropdownItem>
-//                             Option 1
-//                         </DropdownItem>
-//                         <DropdownItem>
-//                             Option 2
-//                         </DropdownItem>
-//                         <DropdownItem divider />
-//                         <DropdownItem>
-//                             Reset
-//                         </DropdownItem>
-//                         </DropdownMenu>
-//                     </UncontrolledDropdown>
-//                     </Nav>
-//                 </Collapse>
-//                 </Navbar>
-//             </div>
-//         )
-//     }
-// }
-
-// export default Header
-
-
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { onLogoutUser } from '../actions'
+import axios from 'axios'
 
 import {
     Button,
@@ -96,7 +26,8 @@ class Header extends Component {
     
         this.toggle = this.toggle.bind(this);
         this.state = {
-          isOpen: false
+          isOpen: false,
+        //   productcart: []
         };
       }
     toggle() {
@@ -105,10 +36,24 @@ class Header extends Component {
         });
       }
 
+    // componentDidMount(){
+    //     axios.get('http://localhost:2019/cart').then(res=>this.setState({productcart:res.data}))
+    // }
+
     onButtonClick = () => {
         // menghapus username dari redux state
         this.props.onLogoutUser()
     }
+
+    // jumlahCart = () => {
+    //     var cart = 0
+    //     for (let i = 0; i < this.state.productcart.length; i++) {
+    //         if(this.props.user.id === this.state.productcart[i].idUser){
+    //             productcart += 1
+    //         }
+    //     }
+    //     return (cart)
+    // }
 
     render () {
         
@@ -179,21 +124,27 @@ class Header extends Component {
                     <NavItem className='mt-2'>
                         <Link to='/' >All Products</Link>
                     </NavItem>
+                    {/* <NavItem className='mt-2 ml-auto'>
+                        <Link to='/checkout' >
+                            <button className = 'btn btn-primary ml-4 mt-auto'>{this.jumlahCart()}
+                            <img id='cart' className='ml-2 mr-2' src='https://image.flaticon.com/icons/svg/34/34568.svg'></img>Shopping Cart 
+                            </button>
+                        </Link>
+                    </NavItem> */}
                     <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret>
                     Hallo, {this.props.user.username}
                     </DropdownToggle>
                     <DropdownMenu right>
                         <DropdownItem>
-                        Option 1 
-                        </DropdownItem>
-                        <DropdownItem>
-                        Option 2
+                        <Link to='/manageProduct' >Manage Product</Link>
                         </DropdownItem>
                         <DropdownItem divider />
+                        <Link to='/login' >
                         <Button className='dropdown-item' onClick={this.onButtonClick}>
                             Logout
                         </Button>
+                        </Link>
                     </DropdownMenu>
                     </UncontrolledDropdown>
                     </Nav>
