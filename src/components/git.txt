@@ -1,0 +1,15 @@
+
+// first time
+$ git init
+$ git add . 
+$ git commit -m "firtst commit"
+$ git remote add origin https://github.com/rakhawardhana/JC-9-Ujian-Front-End-Rakha-Wardhana
+$ git push -u origin master
+
+
+// for continuing
+$ git add .
+$ git commit -m "finished"
+$ git push -u origin master
+
+
