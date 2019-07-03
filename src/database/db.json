@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Alvin",
+      "email": "rakhagustiwardhana@gmail.com",
+      "pass": "123"
+    },
+    {
+      "username": "rakha",
+      "email": "rakhagustiwardhana@gmail.com",
+      "pass": "aku",
+      "id": 2
+    },
+    {
+      "username": "andi",
+      "email": "andi@gmail.com",
+      "pass": "1945",
+      "id": 3
+    },
+    {
+      "username": "Alvin",
+      "email": "rakhagustiwardhana@gmail.com",
+      "pass": "123",
+      "id": 4
+    },
+    {
+      "username": "Alvin",
+      "email": "rakhagustiwardhana@gmail.com",
+      "pass": "123",
+      "id": 5
+    },
+    {
+      "username": "sheila",
+      "email": "sheila@gmail.com",
+      "password": "123",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "nama": "Anjay",
+      "desc": "Barang bagus",
+      "price": "2000",
+      "src": "s",
+      "id": 3
+    },
+    {
+      "nama": "Bagus",
+      "desc": "mantep",
+      "price": "20000",
+      "src": "s",
+      "id": 4
+    },
+    {
+      "nama": "n",
+      "desc": "jg",
+      "price": "j",
+      "src": "m",
+      "id": 5
+    }
+  ],
+  "cart": [
+    {
+      "nama": "Anjay",
+      "deksripsi": "Barang bagus",
+      "harga": "2000",
+      "gambar": "s",
+      "id": 3
+    }
+  ]
+}
